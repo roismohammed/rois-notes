@@ -1,0 +1,13 @@
+a{
+    color: #55585A;
+}
+
+#a{
+    font-weight: bold;
+}
+
+a:hover{
+    text-decoration: none;
+    color: blue;
+}
+
