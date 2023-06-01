@@ -32,37 +32,39 @@ class Index extends Component {
                             <div className="row d-flex justify-content-center">
                                 <div className="col-md-6 pt-5">
                                     <h3>Catatanku</h3>
-                                    <table className="table">
-                                        <thead className="sticky-top">
-                                            <tr>
-                                                <th scope="col"></th>
-                                                <th scope="col"></th>
-                                                <th scope="col"></th>
-                                                <th scope="col"></th>
+                                    <div className="list-group list-group-flush">
+                                        <a
+                                            href="#"
+                                            className="list-group-item list-group-item-action active"
+                                            aria-current="true"
+                                        >
+                                            The current link item
+                                        </a>
+                                        <a href="#" className="list-group-item list-group-item-action">
+                                            A second link item
+                                        </a>
+                                        <a href="#" className="list-group-item list-group-item-action">
+                                            A third link item
+                                        </a>
+                                        <a href="#" className="list-group-item list-group-item-action">
+                                            A fourth link item
+                                        </a>
+                                        <a className="list-group-item list-group-item-action disabled">
+                                            A disabled link item
+                                        </a>
+                                    </div>
 
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th scope="row">Default</th>
-                                                <td></td>
-                                                <td></td>
-                                                <td>Cell</td>
-                                            </tr>
-
-                                        </tbody>
-                                    </table>
 
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            
-                    <div className="text-center fixed-bottom">
-                        <Footer />
-                    </div>
-                
+
+                <div className="text-center fixed-bottom">
+                    <Footer />
+                </div>
+
 
             </Guest>
         );
