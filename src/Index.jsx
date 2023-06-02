@@ -22,7 +22,7 @@ class Index extends Component {
 
                                     <h1 style={{ fontSize: '25px', marginTop: '-30px', fontWeight: 'bold' }}>Muhammad.Rois</h1>
 
-                                    <div style={{ width: '400px' }}>
+                                    <div style={{ width: '360px' }}>
                                         <p style={{ fontSize: '16px', color: '#55585A' }}>Hai selamat datang buku catatanku, Buku ini berisi tulisan bahasa pemrograman dan buku lainnya.</p>
                                     </div>
                                 </div>
