@@ -11,7 +11,7 @@ class Index extends Component {
             <Guest>
                 <div className="page">
                     <Header />
-                    <div className="page-wrapper p-3">
+                    <div className="page-wrapper p-3 ">
                         <div className="page-body ">
                             <div className="container-xl d-flex justify-content-center ">
                                 <div className="text-center p-3">
@@ -27,7 +27,7 @@ class Index extends Component {
                                             fontSize: '26px'
                                         }}>Muhammad.Rois</h1>
 
-                                    <p>Hai selamat datang di buku catatanku, Buku ini berisi tulisan Pemrohramam dan buku tentang IT atau lainnya.
+                                    <p style={{fontSize:'16px',color:' #55585A',width:'400px'}} >Hai selamat datang di buku catatanku, Buku ini berisi tulisan pemrograman dan buku tentang IT atau lainnya.
 
                                     </p>
 
