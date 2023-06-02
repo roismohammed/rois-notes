@@ -35,7 +35,7 @@ class TambahData extends Component {
     }
 
     handleEditorChange = (content) => {
-        this.setState({isiBuku:content})
+        this.setState({ isiBuku: content })
     }
 
 
@@ -47,15 +47,16 @@ class TambahData extends Component {
                         <form onSubmit={this.handleSubmit}>
                             <h1>Tambah Data</h1>
                             <div className="col-md-4">
-                                <label>Nama Buku:</label>
-                                <input
-                                    type="text"
-                                    className="form-control"
-                                    placeholder="Masukkan nama buku"
-                                    name="namaBuku"
-                                    onChange={this.handleChange}
-                                />
-
+                                <label>Kategori Buku:</label>
+                                <select
+                                    type='select'
+                                    className="form-control select">
+                                    <option >Pilih Ketegori</option>
+                                    <option >Pemrograman</option>
+                                    <option >Tektik Komputer Jaringan</option>
+                                    <option >Editing Video</option>
+                                    <option >Informasi Teknologi</option>
+                                </select>
                                 <label>Judul:</label>
                                 <input
                                     type="text"
@@ -75,9 +76,9 @@ class TambahData extends Component {
                                 />
 
                                 <label htmlFor="">Isi Buku:</label>
-                                <Editor 
-                                apiKey="858j7u18k8wb7pt41w5urjfpeusf47tsp1fjysx244w7pz1h"
-                                onEditorChange={this.handleEditorChange} />
+                                <Editor
+                                    apiKey="858j7u18k8wb7pt41w5urjfpeusf47tsp1fjysx244w7pz1h"
+                                    onEditorChange={this.handleEditorChange} />
                             </div>
 
                             <button className="btn btn-secondary">Simpan</button>

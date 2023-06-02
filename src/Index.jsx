@@ -1,9 +1,6 @@
 import { Component } from "react";
 import Guest from "./layout/Guest";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
 import { Link } from "react-router-dom";
-
 class Index extends Component {
 
     render() {
@@ -26,7 +23,7 @@ class Index extends Component {
                                             fontSize: '26px'
                                         }}>Muhammad.Rois</h1>
 
-                                    <div className="col-md-6 ">
+                                    <div >
                                         <p style={{ fontSize: '16px', color: ' #55585A' }} >Hai selamat datang di buku catatanku, Buku ini berisi tulisan pemrograman dan buku tentang IT atau lainnya.
 
                                         </p>
@@ -38,26 +35,27 @@ class Index extends Component {
                             <div className="row d-flex justify-content-center">
                                 <div className="col-md-6 pt-5">
                                     <h3>Catatanku</h3>
-                                    <div className="list-group list-group-flush">
+                                    <div className="list-group list-group-flush" style={{ color: ' #55585A' }}>
                                         <Link
-                                            to={'/detail'}
-                                            className="list-group-item list-group-item-action active"
+                                            style={{ color: ' #55585A', fontSize: '16px' }}
+                                            to={'/detail1/:id'}
+                                            className="list-group-item list-group-item-action active hover"
                                             aria-current="true"
                                         >
                                             Buku pemrograman
                                         </Link>
-                                        <a href="#" className="list-group-item list-group-item-action">
-                                            A second link item
-                                        </a>
-                                        <a href="#" className="list-group-item list-group-item-action">
-                                            A third link item
-                                        </a>
-                                        <a href="#" className="list-group-item list-group-item-action">
-                                            A fourth link item
-                                        </a>
-                                        <a className="list-group-item list-group-item-action disabled">
+                                        <Link className="list-group-item list-group-item-action" style={{ color: ' #55585A', fontSize: '16px' }}>
+                                            Buku Teknik Komputer Jaringan (TKJ)
+                                        </Link>
+                                        <Link className="list-group-item list-group-item-action" style={{ color: ' #55585A', fontSize: '16px' }}>
+                                            Buku Belajar edit Video
+                                        </Link>
+                                        <Link className="list-group-item list-group-item-action" style={{ color: ' #55585A', fontSize: '16px' }}>
+                                            Buku Tentang Informasi Teknologi (IT)
+                                        </Link>
+                                        <Link className="list-group-item list-group-item-action " style={{ color: ' #55585A', fontSize: '16px' }}>
                                             A disabled link item
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
