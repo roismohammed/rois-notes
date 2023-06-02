@@ -11,9 +11,9 @@ class Index extends Component {
             <Guest>
                 <div className="page">
                     <Header />
-                    <div className="page-wrapper p-3">
-                        <div className="page-body ">
-                            <div className="container-xl d-flex justify-content-center">
+                    <div className="page-wrapper">
+                        <div className="page-body p-3 ">
+                            <div className="container-xl d-flex justify-content-center ">
                                 <div className="text-center">
                                     <img
                                         style={{ width: '150px' }}
@@ -61,7 +61,7 @@ class Index extends Component {
                     </div>
                 </div>
 
-                <div className="text-center fixed-bottom">
+                <div className="text-center ">
                     <Footer />
                 </div>
 
