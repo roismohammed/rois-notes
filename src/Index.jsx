@@ -11,8 +11,8 @@ class Index extends Component {
             <Guest>
                 <div className="page">
                     <Header />
-                    <div className="page-wrapper">
-                        <div className="page-body p-3 ">
+                    <div className="page-wrapper p-3">
+                        <div className="page-body ">
                             <div className="container-xl d-flex justify-content-center ">
                                 <div className="text-center">
                                     <img
