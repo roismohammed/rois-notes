@@ -19,8 +19,18 @@ class Index extends Component {
                                         style={{ width: '150px' }}
                                         src="src/img/rois.png"
                                         alt="Muhammad Rois" />
-                                    <h1 style={{marginTop:'-30px',fontWeight:'bold',fontSize:'26px'}}>Muhammad.Rois</h1>
-                                
+
+                                    <h1
+                                        style={{
+                                            marginTop: '-30px',
+                                            fontWeight: 'bold',
+                                            fontSize: '26px'
+                                        }}>Muhammad.Rois</h1>
+
+                                    <p>Hai selamat datang di buku catatanku, Buku ini berisi tulisan Pemrohramam dan buku tentang IT atau lainnya.
+
+                                    </p>
+
                                 </div>
 
                             </div>
