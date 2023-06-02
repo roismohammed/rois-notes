@@ -67,7 +67,7 @@ class TambahData extends Component {
 
                                 <label>Tanggal Di Buat:</label>
                                 <input
-                                    type="text"
+                                    type="date"
                                     className="form-control"
                                     placeholder="Masukkan Tannggal "
                                     name="tanggal"
