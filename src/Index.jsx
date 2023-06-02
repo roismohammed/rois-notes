@@ -14,12 +14,12 @@ class Index extends Component {
                     <div className="page-wrapper p-3">
                         <div className="page-body ">
                             <div className="container-xl d-flex justify-content-center ">
-                                <div className="text-center">
+                                <div className="text-center p-3">
                                     <img
                                         style={{ width: '150px' }}
                                         src="src/img/rois.png"
                                         alt="Muhammad Rois" />
-
+                                    <h1 style={{marginTop:'-30px',fontWeight:'bold',fontSize:'26px'}}>Muhammad.Rois</h1>
                                 
                                 </div>
 
