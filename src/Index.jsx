@@ -38,7 +38,7 @@ class Index extends Component {
                                             className="list-group-item list-group-item-action active"
                                             aria-current="true"
                                         >
-                                            The current link item
+                                            Buku pemrograman
                                         </a>
                                         <a href="#" className="list-group-item list-group-item-action">
                                             A second link item

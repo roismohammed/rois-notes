@@ -1,13 +1,12 @@
-a{
+a {
     color: #55585A;
 }
 
-#a{
+#footer-item {
     font-weight: bold;
 }
 
-a:hover{
+a:hover {
     text-decoration: none;
     color: blue;
 }
-
