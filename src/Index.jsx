@@ -10,7 +10,6 @@ class Index extends Component {
         return (
             <Guest>
                 <div className="page">
-                    <Header />
                     <div className="page-wrapper p-3 ">
                         <div className="page-body ">
                             <div className="container-xl d-flex justify-content-center ">
@@ -27,25 +26,26 @@ class Index extends Component {
                                             fontSize: '26px'
                                         }}>Muhammad.Rois</h1>
 
-                                    <p style={{fontSize:'16px',color:' #55585A',width:'400px'}} >Hai selamat datang di buku catatanku, Buku ini berisi tulisan pemrograman dan buku tentang IT atau lainnya.
+                                    <div className="col-md-6 ">
+                                        <p style={{ fontSize: '16px', color: ' #55585A' }} >Hai selamat datang di buku catatanku, Buku ini berisi tulisan pemrograman dan buku tentang IT atau lainnya.
 
-                                    </p>
+                                        </p>
+                                    </div>
 
                                 </div>
-
                             </div>
 
                             <div className="row d-flex justify-content-center">
                                 <div className="col-md-6 pt-5">
                                     <h3>Catatanku</h3>
                                     <div className="list-group list-group-flush">
-                                        <a
-                                            href="#"
+                                        <Link
+                                            to={'/detail'}
                                             className="list-group-item list-group-item-action active"
                                             aria-current="true"
                                         >
                                             Buku pemrograman
-                                        </a>
+                                        </Link>
                                         <a href="#" className="list-group-item list-group-item-action">
                                             A second link item
                                         </a>
@@ -59,19 +59,11 @@ class Index extends Component {
                                             A disabled link item
                                         </a>
                                     </div>
-
-
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div className="text-center ">
-                    <Footer />
-                </div>
-
-
             </Guest>
         );
     }
