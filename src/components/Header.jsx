@@ -1,4 +1,6 @@
 import { Fragment } from "react";
+import { GiOpenBook } from "react-icons/gi";
+import { Link } from "react-router-dom";
 
 export default function Header() {
     return (
@@ -6,19 +8,16 @@ export default function Header() {
             <header className="navbar navbar-expand-sm navbar-light d-print-none">
                 <div className="container-xl">
                     <h1 className="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
-                        <a href="#">
-                            <img
-                                src="https://preview.tabler.io/static/logo.svg"
-                                width={110}
-                                height={32}
-                                alt="Tabler"
-                                className="navbar-brand-image"
-                            />
-                        </a>
+                        <Link to={'/'} className="nav-link navbar-brand-image">
+                            <a>
+                                <GiOpenBook style={{ height: '40px', width: '40px',hover:'red' }} />
+                            </a>
+                            <th>Rois.notes</th>
+                        </Link>
                     </h1>
                     <div className="navbar-nav flex-row order-md-last">
                         <div className="nav-item">
-                            <a href="#" className="nav-link d-flex lh-1 text-reset p-0">
+                            <Link to={'/contact'} className="nav-link d-flex lh-1 text-reset p-0">
                                 <span
                                     className="avatar avatar-sm"
                                     style={{ backgroundImage: 'src/img/rois.jpeg' }}
@@ -27,7 +26,7 @@ export default function Header() {
                                     <div>Roess</div>
                                     <div className="mt-1 small text-muted">Web Designer</div>
                                 </div>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>

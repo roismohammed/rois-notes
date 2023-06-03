@@ -26,7 +26,6 @@ export default function Detail1() {
                                 className="list-group-item list-group-item-action active"
                                 aria-current="true"
                             >{detail.judul}</Link>
-                          
                         </div>
                     </div>
                 </div>

@@ -3,6 +3,7 @@ import Index from "./Index"
 import TambahData from "./pages/bagian-data/TambahData"
 import Data from "./pages/bagian-data/Data"
 import Detail1 from "./pages/bagian-tampilan/Detail1"
+import Contact from "./pages/bagian-tampilan/Contact"
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path="/detail1/:id" element={<Detail1/>}/>
         <Route path="/tambah-data" element={<TambahData/>}/>
         <Route path="/data" element={<Data/>}/>
+        <Route path="/contact" element={<Contact/>}/>
       </Routes>
     </div>
   )
