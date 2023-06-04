@@ -25,7 +25,7 @@ class Index extends Component {
                                 <div className="text-center p-3">
                                     <img
                                         style={{ width: '150px' }}
-                                        src="./src/img/rois.png"
+                                        src="./rois.png"
                                         alt="Muhammad Rois" />
 
                                     <h1
