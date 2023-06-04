@@ -16,6 +16,13 @@ export default function Header() {
                         </Link>
                     </h1>
                     <div className="navbar-nav flex-row order-md-last">
+                    <div className="nav-item">
+                            <Link to={'/tambah-data'} className="nav-link d-flex lh-1 text-reset p-0">
+                                <div className="d-none d-xl-block ps-2">
+                                    <div>Tambah Data</div>
+                                </div>
+                            </Link>
+                        </div>
                         <div className="nav-item">
                             <Link to={'/contact'} className="nav-link d-flex lh-1 text-reset p-0">
                                 <span
