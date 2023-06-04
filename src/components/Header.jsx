@@ -12,7 +12,7 @@ export default function Header() {
                             <a>
                                 <GiOpenBook style={{ height: '40px', width: '40px',hover:'red' }} />
                             </a>
-                            <th>Rois.notes</th>
+                            <h2 className="mt-3">Rois.notes</h2>
                         </Link>
                     </h1>
                     <div className="navbar-nav flex-row order-md-last">

@@ -6,6 +6,7 @@ import Detail1 from "./pages/bagian-tampilan/Detail1"
 import Contact from "./pages/bagian-tampilan/Contact"
 
 
+
 function App() {
 
   return (

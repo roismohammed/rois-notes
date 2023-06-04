@@ -1,6 +1,6 @@
 import { Component } from "react";
 import Guest from "../../layout/Guest";
-import { RiFacebookCircleFill, RiInstagramFill, } from "react-icons/ri";
+import { RiFacebookCircleFill } from "react-icons/ri";
 class Contact extends Component {
     render() {
         return (
@@ -16,13 +16,12 @@ class Contact extends Component {
                                     <p>Halo, nama saya Muhammad Rois. Saya seorang Junior Front-End Programmer dengan keahlian dalam pengembangan menggunakan bahasa pemrograman seperti JavaScript, Bootstrap, dan ReactJS. Saya juga memiliki pengalaman dalam desain dan implementasi database, serta integrasi sistem dengan layanan pihak ketiga seperti API dan platform lainnya.</p>
 
                                     {/* bagian skill */}
-                                    <th className="p-3">
+                                    <h4 className="p-3">
                                         <div className="sosmed">
-                                            <RiFacebookCircleFill  style={{ width: '25px', height: '25px' }} />
-                                             Muhammad Rois
+                                            <RiFacebookCircleFill style={{ width: '25px', height: '25px' }} />
+                                            Muhammad Rois
                                         </div>
-
-                                    </th>
+                                    </h4>
 
                                 </div>
                                 {/* bagian form input */}

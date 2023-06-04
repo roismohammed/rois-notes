@@ -22,7 +22,6 @@ export default function Detail1() {
                         <h1> Daftar Buku Pemrograman</h1>
                         <div className="list-group list-group-flush">
                             <Link
-                                to={'/detail2' + id}
                                 className="list-group-item list-group-item-action active"
                                 aria-current="true"
                             >{detail.judul}</Link>

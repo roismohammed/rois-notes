@@ -1,8 +1,20 @@
 import { Component } from "react";
 import Guest from "./layout/Guest";
 import { Link } from "react-router-dom";
+import axios from "axios";
 class Index extends Component {
+    state = {
+        buku:[]
+    }
 
+    componentDidMount(){
+        axios.get('https://63f175f8ff1b45a1a44c803d.mockapi.io/Catatan')
+        .then((res) => {
+            this.setState({
+                buku:res.data
+            })
+        })
+    }
     render() {
         return (
             <Guest>
@@ -38,7 +50,7 @@ class Index extends Component {
                                     <div className="list-group list-group-flush" style={{ color: ' #55585A' }}>
                                         <Link
                                             style={{ color: ' #55585A', fontSize: '16px' }}
-                                            to={'/detail1/:id'}
+                                            to={'/detail1/'   }
                                             className="list-group-item list-group-item-action active hover"
                                             aria-current="true"
                                         >
