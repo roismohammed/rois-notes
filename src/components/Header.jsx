@@ -10,13 +10,13 @@ export default function Header() {
                     <h1 className="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
                         <Link to={'/'} className="nav-link navbar-brand-image">
                             <a>
-                                <GiOpenBook style={{ height: '40px', width: '40px',hover:'red' }} />
+                                <GiOpenBook style={{ height: '40px', width: '40px', hover: 'red' }} />
                             </a>
                             <h2 className="mt-3">Rois.notes</h2>
                         </Link>
                     </h1>
                     <div className="navbar-nav flex-row order-md-last">
-                    <div className="nav-item">
+                        <div className="nav-item">
                             <Link to={'/tambah-data'} className="nav-link d-flex lh-1 text-reset p-0">
                                 <div className="d-none d-xl-block ps-2">
                                     <div>Tambah Data</div>
@@ -25,10 +25,12 @@ export default function Header() {
                         </div>
                         <div className="nav-item">
                             <Link to={'/contact'} className="nav-link d-flex lh-1 text-reset p-0">
-                                <span
-                                    className="avatar avatar-sm"
-                                    style={{ backgroundImage: 'src/img/rois.jpeg' }}
-                                />
+                                <span className="avatar avatar-sm">
+                                    <img
+                                        src="./gowes.jpeg"
+                                        width={'80px'}
+                                        style={{height:'30px',width:'30px'}}/>
+                                </span>
                                 <div className="d-none d-xl-block ps-2">
                                     <div>Roess</div>
                                     <div className="mt-1 small text-muted">Web Designer</div>

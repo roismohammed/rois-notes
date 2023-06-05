@@ -47,16 +47,12 @@ class TambahData extends Component {
                         <form onSubmit={this.handleSubmit}>
                             <h1>Tambah Data</h1>
                             <div className="col-md-4">
-                                <label>Kategori Buku:</label>
-                                <select
-                                    type='select'
-                                    className="form-control select">
-                                    <option >Pilih Ketegori</option>
-                                    <option >Pemrograman</option>
-                                    <option >Tektik Komputer Jaringan</option>
-                                    <option >Editing Video</option>
-                                    <option >Informasi Teknologi</option>
-                                </select>
+                                <label>Nama Buku:</label>
+                                <input
+                                    type="text"
+                                    className="form-control"
+                                    name="namaBuku"
+                                    onChange={this.handleChange} />
                                 <label>Judul:</label>
                                 <input
                                     type="text"

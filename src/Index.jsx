@@ -50,7 +50,7 @@ class Index extends Component {
                                     <div className="list-group list-group-flush" style={{ color: ' #55585A' }}>
                                         <Link
                                             style={{ color: ' #55585A', fontSize: '16px' }}
-                                            to={'/detail1/'   }
+                                            to={'/detail1/'}
                                             className="list-group-item list-group-item-action active hover"
                                             aria-current="true"
                                         >
