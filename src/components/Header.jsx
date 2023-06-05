@@ -27,9 +27,7 @@ export default function Header() {
                             <Link to={'/contact'} className="nav-link d-flex lh-1 text-reset p-0">
                                 <span className="avatar avatar-sm">
                                     <img
-                                        src="./gowes.jpeg"
-                                        width={'80px'}
-                                        style={{height:'30px',width:'30px'}}/>
+                                        src="./gowes.jpeg"/>
                                 </span>
                                 <div className="d-none d-xl-block ps-2">
                                     <div>Roess</div>
