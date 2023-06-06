@@ -2,8 +2,8 @@ import { Route, Routes } from "react-router-dom"
 import Index from "./Index"
 import TambahData from "./pages/bagian-data/TambahData"
 import Data from "./pages/bagian-data/Data"
-import Detail1 from "./pages/bagian-tampilan/Detail1"
 import Contact from "./pages/bagian-tampilan/Contact"
+import Detail from "./pages/bagian-tampilan/Detail"
 
 
 
@@ -13,10 +13,10 @@ function App() {
     <div>
       <Routes>
         <Route path="/" element={<Index />} />
-        <Route path="/detail1" element={<Detail1/>}/>
         <Route path="/tambah-data" element={<TambahData/>}/>
         <Route path="/data" element={<Data/>}/>
         <Route path="/contact" element={<Contact/>}/>
+        <Route path="/detail/:id" element={<Detail/>}/>
       </Routes>
     </div>
   )

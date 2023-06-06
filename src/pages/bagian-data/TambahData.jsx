@@ -2,6 +2,7 @@ import { Component } from "react";
 import Admin from "../../layout/Admin";
 import { Editor } from '@tinymce/tinymce-react';
 import axios from "axios";
+
 class TambahData extends Component {
     constructor(props) {
         super(props)
@@ -21,7 +22,7 @@ class TambahData extends Component {
             tanggal: this.state.tanggal,
             isiBuku: this.state.isiBuku
         }).then(() => {
-            console.log('Berhasil ')
+          alert('Berhasil')
         }).catch((err) => {
             console.log(err)
         })

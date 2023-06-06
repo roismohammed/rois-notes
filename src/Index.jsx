@@ -4,16 +4,16 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 class Index extends Component {
     state = {
-        buku:[]
+        buku: []
     }
 
-    componentDidMount(){
-        axios.get('https://63f175f8ff1b45a1a44c803d.mockapi.io/Catatan')
-        .then((res) => {
-            this.setState({
-                buku:res.data
+    componentDidMount() {
+        axios.get('https://63f175f8ff1b45a1a44c803d.mockapi.io/Catatan/')
+            .then((res) => {
+                this.setState({
+                    buku: res.data
+                })
             })
-        })
     }
     render() {
         return (
@@ -47,28 +47,30 @@ class Index extends Component {
                             <div className="row d-flex justify-content-center">
                                 <div className="col-md-6 pt-5">
                                     <h3>Catatanku</h3>
-                                    <div className="list-group list-group-flush" style={{ color: ' #55585A' }}>
-                                        <Link
-                                            style={{ color: ' #55585A', fontSize: '16px' }}
-                                            to={'/detail1/'}
-                                            className="list-group-item list-group-item-action active hover"
-                                            aria-current="true"
-                                        >
-                                            Buku pemrograman
-                                        </Link>
-                                        <Link className="list-group-item list-group-item-action" style={{ color: ' #55585A', fontSize: '16px' }}>
-                                            Buku Teknik Komputer Jaringan (TKJ)
-                                        </Link>
-                                        <Link className="list-group-item list-group-item-action" style={{ color: ' #55585A', fontSize: '16px' }}>
-                                            Buku Belajar edit Video
-                                        </Link>
-                                        <Link className="list-group-item list-group-item-action" style={{ color: ' #55585A', fontSize: '16px' }}>
-                                            Buku Tentang Informasi Teknologi (IT)
-                                        </Link>
-                                        <Link className="list-group-item list-group-item-action " style={{ color: ' #55585A', fontSize: '16px' }}>
-                                            A disabled link item
-                                        </Link>
-                                    </div>
+                                    {this.state.buku.map(data => (
+                                        <div key={data.id} className="list-group list-group-flush" style={{ color: ' #55585A' }}>
+                                            <Link
+                                                style={{ color: ' #55585A', fontSize: '16px' }}
+                                                className="list-group-item list-group-item-action active hover"
+                                                aria-current="true"
+                                                to={'/detail/' + data.id}
+                                            >
+                                                Buku pemrograman
+                                            </Link>
+                                            <Link className="list-group-item list-group-item-action" style={{ color: ' #55585A', fontSize: '16px' }}>
+                                                Buku Teknik Komputer Jaringan (TKJ)
+                                            </Link>
+                                            <Link className="list-group-item list-group-item-action" style={{ color: ' #55585A', fontSize: '16px' }}>
+                                                Buku Belajar edit Video
+                                            </Link>
+                                            <Link className="list-group-item list-group-item-action" style={{ color: ' #55585A', fontSize: '16px' }}>
+                                                Buku Tentang Informasi Teknologi (IT)
+                                            </Link>
+                                            <Link className="list-group-item list-group-item-action " style={{ color: ' #55585A', fontSize: '16px' }}>
+                                                A disabled link item
+                                            </Link>
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
                         </div>
