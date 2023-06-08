@@ -2,7 +2,8 @@ import { Component } from "react";
 import Admin from "../../layout/Admin";
 import { Editor } from '@tinymce/tinymce-react';
 import axios from "axios";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 class TambahData extends Component {
     constructor(props) {
         super(props)
@@ -22,7 +23,7 @@ class TambahData extends Component {
             tanggal: this.state.tanggal,
             isiBuku: this.state.isiBuku
         }).then(() => {
-          alert('Berhasil')
+            toast("Data telah tersimpan!");
         }).catch((err) => {
             console.log(err)
         })
@@ -78,8 +79,8 @@ class TambahData extends Component {
                                     onEditorChange={this.handleEditorChange} />
                             </div>
 
-                            <button className="btn btn-secondary">Simpan</button>
-
+                            <button className="btn btn-secondary" onClick={this.notify} >Simpan</button>
+                            <ToastContainer />
                         </form>
                     </div>
                 </div>
