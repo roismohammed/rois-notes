@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function Header() {
     return (
         <Fragment>
-            <header className="navbar navbar-expand-sm navbar-light d-print-none">
+            <header className="navbar navbar-expand-sm navbar-light d-print-none fixed-top">
                 <div className="container-xl">
                     <h1 className="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
                         <Link to={'/'} className="nav-link navbar-brand-image">

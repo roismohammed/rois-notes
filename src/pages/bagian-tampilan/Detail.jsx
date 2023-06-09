@@ -17,7 +17,7 @@ export default function Detail() {
     })
     return (
         <Guest>
-            <div className="container">
+            <div className="container pt-5">
                 <div className="row">
                     <div className="row d-flex justify-content-center">
                         <div className="col-md-6 pt-5">

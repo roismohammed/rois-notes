@@ -1,5 +1,6 @@
 import axios from "axios";
 import { Component } from "react";
+import { Link } from "react-router-dom";
 
 class Data extends Component {
     state = {
@@ -23,15 +24,28 @@ class Data extends Component {
             })
     }
 
+    handleSearch = (e) => {
+        if(e.target.value != ''){
+            let bukuDiFilter = this.state.buku.filter((buku) => {
+                return buku.judul.tolowerCase().indexOff(e.target.buku.tolowerCase()) !== -1
+            })
+            this.setState({
+                buku:bukuDiFilter
+            })
+        }else(
+            this.componentDidMount()
+        )
+    }
+
     render() {
         return (
-            <div className="container">
+            <div className="container pt-5">
                 <h1>Data</h1>
+                <input type="text" className="form-control" placeholder="Search.." onChange={this.handleSearch} />
                 <table className="table">
                     <thead>
                         <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Nama Buku</th>
+                            <th scope="col">No</th>
                             <th scope="col">Judul Buku</th>
                             <th scope="col">Tanggal Di Buat</th>
                             <th scope="col">Isi buku</th>
@@ -43,12 +57,17 @@ class Data extends Component {
                             <tbody key={data.id}>
                                 <tr>
                                     <th scope="row">{data.id}</th>
-                                    <td>{data.namaBuku}</td>
                                     <td>{data.judul}</td>
                                     <td>{data.tanggal}</td>
-                                    <td>{data.isiBuku}</td>
+                                    <td dangerouslySetInnerHTML={{ __html: data.isiBuku }}></td>
+                                    {/* <td>
+                                        <button className="btn btn-secondary" onClick={() => this.handleDelete(data.id)}>Hapus</button>
+                                    </td> */}
+
                                     <td>
-                                        <button onClick={() => this.handleDelete(data.id)}>Hapus</button>
+                                        <Link to={'/edit/' + data.id}>
+                                            <button className="btn btn-secondary">Edit</button>
+                                        </Link>
                                     </td>
                                 </tr>
                             </tbody>

@@ -16,8 +16,8 @@ function App() {
         <Route path="/" element={<Index />} />
         <Route path="/tambah-data" element={<TambahData/>}/>
         <Route path="/data" element={<Data/>}/>
-        <Route path="/edit" element={<EditData/>}/>
         <Route path="/contact" element={<Contact/>}/>
+        <Route path="/edit/:id" element={<EditData/>}/>
         <Route path="/detail/:id" element={<Detail/>}/>
       </Routes>
     </div>

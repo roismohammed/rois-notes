@@ -18,7 +18,7 @@ class Index extends Component {
     render() {
         return (
             <Guest>
-                <div className="page">
+                <div className="page pt-5">
                     <div className="page-wrapper p-3 ">
                         <div className="page-body ">
                             <div className="container-xl d-flex justify-content-center ">
@@ -51,7 +51,7 @@ class Index extends Component {
                                        <div key={data.id} className="list-group list-group-flush" style={{ color: ' #55585A' }}>
                                        <Link
                                            style={{ color: ' #55585A', fontSize: '16px' }}
-                                           className="list-group-item list-group-item-action active hover"
+                                           className="list-group-item list-group-item-action border-top hover"
                                            aria-current="true"
                                            to={'/detail/' + data.id}
                                        >
