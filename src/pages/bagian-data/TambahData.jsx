@@ -46,7 +46,7 @@ class TambahData extends Component {
             <Admin>
                 <div className="container">
                     <div className="row">
-                        <form onSubmit={this.handleSubmit}>
+                        <form onSubmit={this.handleSubmit} className="was-validated">
                             <h1>Tambah Data</h1>
                             <div className="col-md-4">
                                 <label>Judul:</label>
@@ -55,8 +55,8 @@ class TambahData extends Component {
                                     className="form-control"
                                     placeholder="Masukkan judul buku"
                                     name="judul"
-                                    onChange={this.handleChange} />
-
+                                    onChange={this.handleChange} required/>
+                                <div className="invalid-feedback">Judul harus di isi</div>
 
                                 <label>Tanggal Di Buat:</label>
                                 <input

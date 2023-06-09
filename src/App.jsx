@@ -4,6 +4,7 @@ import TambahData from "./pages/bagian-data/TambahData"
 import Data from "./pages/bagian-data/Data"
 import Contact from "./pages/bagian-tampilan/Contact"
 import Detail from "./pages/bagian-tampilan/Detail"
+import EditData from "./pages/bagian-data/EditData"
 
 
 
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Index />} />
         <Route path="/tambah-data" element={<TambahData/>}/>
         <Route path="/data" element={<Data/>}/>
+        <Route path="/edit" element={<EditData/>}/>
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/detail/:id" element={<Detail/>}/>
       </Routes>
