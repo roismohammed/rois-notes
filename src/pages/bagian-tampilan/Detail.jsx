@@ -22,28 +22,9 @@ export default function Detail() {
                     <div className="row d-flex justify-content-center">
                         <div className="col-md-6 pt-5">
                             <Link to={'/'}>Beranda</Link>
-                            <h1>Daftar Buku </h1>
+                            <h1>Isi Buku  | {detail.judul} </h1>
                             <div className="list-group list-group-flush" style={{ color: ' #55585A' }}>
-                                <Link
-                                    style={{ color: ' #55585A', fontSize: '16px' }}
-                                    className="list-group-item list-group-item-action active hover"
-                                    aria-current="true"
-                                    to={'/detail/:id'}
-                                >
-                                    Buku pemrograman
-                                </Link>
-                                <Link className="list-group-item list-group-item-action" style={{ color: ' #55585A', fontSize: '16px' }}>
-                                    Buku Teknik Komputer Jaringan (TKJ)
-                                </Link>
-                                <Link className="list-group-item list-group-item-action" style={{ color: ' #55585A', fontSize: '16px' }}>
-                                    Buku Belajar edit Video
-                                </Link>
-                                <Link className="list-group-item list-group-item-action" style={{ color: ' #55585A', fontSize: '16px' }}>
-                                    Buku Tentang Informasi Teknologi (IT)
-                                </Link>
-                                <Link className="list-group-item list-group-item-action " style={{ color: ' #55585A', fontSize: '16px' }}>
-                                    A disabled link item
-                                </Link>
+                            <p style={{fontSize:'16px'}} dangerouslySetInnerHTML={{__html:detail.isiBuku}}></p>
                             </div>
                         </div>
                     </div>

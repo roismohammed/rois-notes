@@ -24,13 +24,13 @@ class Index extends Component {
                             <div className="container-xl d-flex justify-content-center ">
                                 <div className="text-center p-3">
                                     <img
-                                        style={{ width: '150px' }}
-                                        src="./rois.png"
+                                        style={{ width: '80px' }}
+                                        src="./roes.png"
                                         alt="Muhammad Rois" />
 
                                     <h1
                                         style={{
-                                            marginTop: '-30px',
+                                            marginTop: '-0px',
                                             fontWeight: 'bold',
                                             fontSize: '26px'
                                         }}>Muhammad.Rois</h1>
@@ -45,30 +45,21 @@ class Index extends Component {
                             </div>
 
                             <div className="row d-flex justify-content-center">
-                                <div className="col-md-6 pt-5">
+                                <div className="col-md-6 pt-3">
                                     <h3>Catatanku</h3>
-                                    <div className="list-group list-group-flush" style={{ color: ' #55585A' }}>
-                                        <Link
-                                            style={{ color: ' #55585A', fontSize: '16px' }}
-                                            className="list-group-item list-group-item-action active hover"
-                                            aria-current="true"
-                                            to={'/detail/:id'}
-                                        >
-                                            Buku pemrograman
-                                        </Link>
-                                        <Link className="list-group-item list-group-item-action" style={{ color: ' #55585A', fontSize: '16px' }}>
-                                            Buku Teknik Komputer Jaringan (TKJ)
-                                        </Link>
-                                        <Link className="list-group-item list-group-item-action" style={{ color: ' #55585A', fontSize: '16px' }}>
-                                            Buku Belajar edit Video
-                                        </Link>
-                                        <Link className="list-group-item list-group-item-action" style={{ color: ' #55585A', fontSize: '16px' }}>
-                                            Buku Tentang Informasi Teknologi (IT)
-                                        </Link>
-                                        <Link className="list-group-item list-group-item-action " style={{ color: ' #55585A', fontSize: '16px' }}>
-                                            A disabled link item
-                                        </Link>
-                                    </div>
+                                 {this.state.buku.map(data => (
+                                       <div key={data.id} className="list-group list-group-flush" style={{ color: ' #55585A' }}>
+                                       <Link
+                                           style={{ color: ' #55585A', fontSize: '16px' }}
+                                           className="list-group-item list-group-item-action active hover"
+                                           aria-current="true"
+                                           to={'/detail/' + data.id}
+                                       >
+                                           {data.judul}
+                                       </Link>
+                                      
+                                   </div>
+                                 ))}
                                 </div>
                             </div>
                         </div>

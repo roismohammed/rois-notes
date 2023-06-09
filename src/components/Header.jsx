@@ -25,7 +25,7 @@ export default function Header() {
                         </div>
                         <div className="nav-item">
                             <Link to={'/contact'} className="nav-link d-flex lh-1 text-reset p-0">
-                                <span className="avatar avatar-sm">
+                                <span className="avatar avatar-sm rounded-sm">
                                     <img
                                         src="./gowes.jpeg"/>
                                 </span>

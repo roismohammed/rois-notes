@@ -49,12 +49,6 @@ class TambahData extends Component {
                         <form onSubmit={this.handleSubmit}>
                             <h1>Tambah Data</h1>
                             <div className="col-md-4">
-                                <label>Nama Buku:</label>
-                                <input
-                                    type="text"
-                                    className="form-control"
-                                    name="namaBuku"
-                                    onChange={this.handleChange} />
                                 <label>Judul:</label>
                                 <input
                                     type="text"
