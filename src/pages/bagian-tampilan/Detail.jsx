@@ -33,7 +33,7 @@ export default function Detail() {
                         </div>
                     </div>
                 </div>
-                <div className="d-felx justify-content-between">
+                <div className="text-end">
                     <div className="fixed-bottom float-end p-5 ">
                         <a href="#atas">
                             <TbArrowBigUpLineFilled style={{ backgroundColor: 'grey', borderRadius: '10%', color: 'black', width: '40px', height: '35px' }} />
