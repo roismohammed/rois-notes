@@ -15,6 +15,7 @@ class Index extends Component {
                 })
             })
     }
+
     render() {
         return (
             <Guest>
@@ -47,19 +48,19 @@ class Index extends Component {
                             <div className="row d-flex justify-content-center">
                                 <div className="col-md-6 pt-3">
                                     <h3>Catatanku</h3>
-                                 {this.state.buku.map(data => (
-                                       <div key={data.id} className="list-group list-group-flush" style={{ color: ' #55585A' }}>
-                                       <Link
-                                           style={{ color: ' #55585A', fontSize: '16px' }}
-                                           className="list-group-item list-group-item-action border-top hover"
-                                           aria-current="true"
-                                           to={'/detail/' + data.id}
-                                       >
-                                           {data.judul}
-                                       </Link>
-                                      
-                                   </div>
-                                 ))}
+                                    {this.state.buku.map(data => (
+                                        <div key={data.id} className="list-group list-group-flush" style={{ color: ' #55585A' }}>
+                                            <Link
+                                                style={{ color: ' #55585A', fontSize: '16px' }}
+                                                className="list-group-item list-group-item-action border-top hover"
+                                                aria-current="true"
+                                                to={'/detail/' + data.id}
+                                            >
+                                                {data.judul}
+                                            </Link>
+
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
                         </div>
