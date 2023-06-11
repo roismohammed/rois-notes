@@ -1,5 +1,6 @@
 import axios from "axios";
 import { Component } from "react";
+import { TbArrowBigUpLineFilled } from "react-icons/tb";
 import { Link } from "react-router-dom";
 
 class Data extends Component {
@@ -8,7 +9,7 @@ class Data extends Component {
     }
 
     componentDidMount() {
-        axios.get('https://63f175f8ff1b45a1a44c803d.mockapi.io/Catatan')
+        axios.get('https://63f175f8ff1b45a1a44c803d.mockapi.io/Catatan/')
             .then((res) => {
                 this.setState({
                     buku: res.data
@@ -25,21 +26,23 @@ class Data extends Component {
     }
 
     handleSearch = (e) => {
-        if(e.target.value != ''){
+        if (e.target.value !== '') {
             let bukuDiFilter = this.state.buku.filter((buku) => {
-                return buku.judul.tolowerCase().indexOff(e.target.buku.tolowerCase()) !== -1
+                return buku.judul.toLowerCase().indexOf(e.target.value.toLowerCase()) !== -1
             })
+
             this.setState({
-                buku:bukuDiFilter
+                buku: bukuDiFilter
             })
-        }else(
+        } else (
             this.componentDidMount()
+
         )
     }
 
     render() {
         return (
-            <div className="container pt-5">
+            <div className="container pt-5" id="atas">
                 <h1>Data</h1>
                 <input type="text" className="form-control" placeholder="Search.." onChange={this.handleSearch} />
                 <table className="table">
@@ -74,6 +77,13 @@ class Data extends Component {
                         )
                     })}
                 </table>
+                    <div className="text-end">
+                        <div className="fixed-bottom float-end p-5 ">
+                            <a href="#atas">
+                                <TbArrowBigUpLineFilled style={{ backgroundColor: 'grey', borderRadius: '10%', color: 'black', width: '40px', height: '35px' }} />
+                            </a>
+                        </div>
+                    </div>
 
             </div>
         );
