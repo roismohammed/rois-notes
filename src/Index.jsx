@@ -56,7 +56,10 @@ class Index extends Component {
                                                 aria-current="true"
                                                 to={'/detail/' + data.id}
                                             >
-                                                {data.judul}
+                                                <div>
+                                                    {data.id}.
+                                                    {data.judul}
+                                                </div>
                                             </Link>
 
                                         </div>

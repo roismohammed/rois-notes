@@ -56,7 +56,7 @@ class TambahData extends Component {
                                     className="form-control"
                                     placeholder="Masukkan judul buku"
                                     name="judul"
-                                    onChange={this.handleChange} required />
+                                    onChange={this.handleChange} required/>
                                 <div className="invalid-feedback">Judul harus di isi</div>
 
                                 <label>Tanggal Di Buat:</label>
@@ -69,21 +69,19 @@ class TambahData extends Component {
                                 />
 
                             </div>
-                            <label htmlFor="">Isi Buku:</label>
-                            <Editor
-                                apiKey="858j7u18k8wb7pt41w5urjfpeusf47tsp1fjysx244w7pz1h"
-                                onEditorChange={this.handleEditorChange} />
+                                <label htmlFor="">Isi Buku:</label>
+                                <Editor
+                                    apiKey="858j7u18k8wb7pt41w5urjfpeusf47tsp1fjysx244w7pz1h"
+                                    onEditorChange={this.handleEditorChange} />
 
-                            <button
-                                className="btn btn-secondary"
-                                onClick={this.notify} >Simpan</button>
+                            <button className="btn btn-secondary" onClick={this.notify} >Simpan</button>
                             <ToastContainer />
 
-
-                            <Link to={'/data/'}>
-                                <button className="btn btn-secondary">Liat Data</button>
-                            </Link>
-
+                            <div>
+                                <Link to={'/data/'}>
+                                    <button className="btn btn-secondary">Liat Data</button>
+                                </Link>
+                            </div>
                         </form>
                     </div>
                 </div>

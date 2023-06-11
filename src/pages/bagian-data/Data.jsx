@@ -30,13 +30,11 @@ class Data extends Component {
             let bukuDiFilter = this.state.buku.filter((buku) => {
                 return buku.judul.toLowerCase().indexOf(e.target.value.toLowerCase()) !== -1
             })
-
             this.setState({
                 buku: bukuDiFilter
             })
         } else (
             this.componentDidMount()
-
         )
     }
 
@@ -77,13 +75,13 @@ class Data extends Component {
                         )
                     })}
                 </table>
-                    <div className="text-end">
-                        <div className="fixed-bottom float-end p-5 ">
-                            <a href="#atas">
-                                <TbArrowBigUpLineFilled style={{ backgroundColor: 'grey', borderRadius: '10%', color: 'black', width: '40px', height: '35px' }} />
-                            </a>
-                        </div>
+                <div className="text-end">
+                    <div className="fixed-bottom float-end p-5 ">
+                        <a href="#atas">
+                            <TbArrowBigUpLineFilled style={{ backgroundColor: 'grey', borderRadius: '10%', color: 'black', width: '40px', height: '35px' }} />
+                        </a>
                     </div>
+                </div>
 
             </div>
         );
