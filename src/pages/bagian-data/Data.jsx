@@ -53,27 +53,32 @@ class Data extends Component {
                             <th scope="col">Action</th>
                         </tr>
                     </thead>
-                    {this.state.buku.map(data => {
-                        return (
-                            <tbody key={data.id}>
-                                <tr>
-                                    <th scope="row">{data.id}</th>
-                                    <td>{data.judul}</td>
-                                    <td>{data.tanggal}</td>
-                                    <td dangerouslySetInnerHTML={{ __html: data.isiBuku }}></td>
-                                    {/* <td>
+
+                    {this.state.buku && this.state.buku.length > 0 ?
+                        this.state.buku.map(data => {
+                            return (
+                                <tbody key={data.id}>
+                                    <tr>
+                                        <th scope="row">{data.id}</th>
+                                        <td>{data.judul}</td>
+                                        <td>{data.tanggal}</td>
+                                        <td dangerouslySetInnerHTML={{ __html: data.isiBuku }}></td>
+                                        {/* <td>
                                         <button className="btn btn-secondary" onClick={() => this.handleDelete(data.id)}>Hapus</button>
                                     </td> */}
 
-                                    <td>
-                                        <Link to={'/edit/' + data.id}>
-                                            <button className="btn btn-secondary">Edit</button>
-                                        </Link>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        )
-                    })}
+                                        <td>
+                                            <Link to={'/edit/' + data.id}>
+                                                <button className="btn btn-secondary">Edit</button>
+                                            </Link>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            )
+                        })
+                        :
+                        <p className="text-center">tidak ada data</p>
+                    }
                 </table>
                 <div className="text-end">
                     <div className="fixed-bottom float-end p-5 ">

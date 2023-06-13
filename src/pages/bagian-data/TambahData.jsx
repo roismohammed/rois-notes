@@ -74,7 +74,7 @@ class TambahData extends Component {
                                     apiKey="858j7u18k8wb7pt41w5urjfpeusf47tsp1fjysx244w7pz1h"
                                     onEditorChange={this.handleEditorChange} />
 
-                            <button className="btn btn-secondary" onClick={this.notify} >Simpan</button>
+                            <button className="btn btn-secondary position-top-center" onClick={this.notify} >Simpan</button>
                             <ToastContainer />
 
                             <div>

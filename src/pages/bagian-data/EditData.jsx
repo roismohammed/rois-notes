@@ -15,6 +15,7 @@ export default function EditData() {
         axios.get('https://63f175f8ff1b45a1a44c803d.mockapi.io/Catatan/' + id)
             .then((res) => {
                 setEdit(res.data)
+                setContent(res.data.isiBuku);
             })
     }, [])
 
@@ -23,7 +24,7 @@ export default function EditData() {
         axios.put('https://63f175f8ff1b45a1a44c803d.mockapi.io/Catatan/' + id, {
             judul: edit.judul,
             tanggal: edit.tanggal,
-            content: "",
+            isiBuku: content,
         })
             .then(() => {
                 toast("Data telah tersimpan!");
@@ -35,14 +36,14 @@ export default function EditData() {
 
     const handleChange = (e) => {
         setEdit({
-            ...edit,
             [e.target.name]: e.target.value
         })
     }
 
     const handleEditorChange = (content) => {
-        this.setState({ content });
-      };
+        setContent(content);
+    };
+    
     
     return (
         <Admin>
@@ -75,13 +76,13 @@ export default function EditData() {
                                 apiKey="858j7u18k8wb7pt41w5urjfpeusf47tsp1fjysx244w7pz1h"
                                 onEditorChange={handleEditorChange}
                                 value={content}
-                                initialValue={edit.isiBuku} // Menggunakan state 'content' untuk value
+                                initialValue={content} // Meng Menggunakan state 'content' untuk value
                             />
                         </div>
 
                         <tr>
                             <td>
-                                <button className="btn btn-secondary">Simpan</button>
+                                <button className="btn btn-secondary">Update</button>
                                 <ToastContainer />
                             </td>
                             <td>
