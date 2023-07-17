@@ -2,7 +2,6 @@ import axios from "axios";
 import { Component } from "react";
 import { TbArrowBigUpLineFilled } from "react-icons/tb";
 import { Link } from "react-router-dom";
-
 class Data extends Component {
     state = {
         buku: []
@@ -18,11 +17,16 @@ class Data extends Component {
     }
 
     handleDelete = (id) => {
-        axios.delete('https://63f175f8ff1b45a1a44c803d.mockapi.io/Catatan/' + id)
-            .then(() => {
-                alert('Berhasil')
-                this.componentDidMount()
-            })
+        const confirmDelete = window.confirm('apakah anda mau menghapus data ini ')
+        if (confirmDelete) {
+            axios.delete('https://63f175f8ff1b45a1a44c803d.mockapi.io/Catatan/' + id)
+                .then(() => {
+                    alert('Berhasil')
+                    this.componentDidMount()
+                })
+        }else(
+            alert('gagal untuk menghapus')
+        )
     }
 
     handleSearch = (e) => {
@@ -63,15 +67,16 @@ class Data extends Component {
                                         <td>{data.judul}</td>
                                         <td>{data.tanggal}</td>
                                         <td dangerouslySetInnerHTML={{ __html: data.isiBuku }}></td>
-                                        {/* <td>
-                                        <button className="btn btn-secondary" onClick={() => this.handleDelete(data.id)}>Hapus</button>
-                                    </td> */}
+                                        <td>
+                                            <button className="btn btn-secondary" onClick={() => this.handleDelete(data.id)}>Hapus</button>
+                                        </td>
 
                                         <td>
                                             <Link to={'/edit/' + data.id}>
-                                                <button className="btn btn-secondary">Edit</button>
+                                                <button className="btn btn-primary">Edit</button>
                                             </Link>
                                         </td>
+
                                     </tr>
                                 </tbody>
                             )
